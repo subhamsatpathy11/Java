@@ -37,6 +37,9 @@ In a university there are various departments. A department has a name and is as
  - A summary of the new account's details is then emailed to the user.
 
 
+![Blank diagram (2)](https://user-images.githubusercontent.com/66563130/148817057-a6987025-cbba-4071-ae33-12e4bffcf4e4.png)
+
+
 
 
 
