@@ -4,7 +4,12 @@
 
 ![Airline_Reservation_normal](https://user-images.githubusercontent.com/66563130/148816149-5de9d663-5364-4f50-81bf-b9923fd1bb5f.png)
 
-2.
+2. Design and draw UML class diagram with attributes, behaviour, and class relationships for the following scenario.
+
+In a university there are various departments. A department has a name and is associated to classrooms and offices. An employee working at the university has a unique Id and can be a professor or an instructor. A professor can be a full professor, associate professor, or assistant professor and he/she belongs to a department in the university. Offices and classrooms also have unique IDs and classrooms have fixed number of seats. Also, every employee is assigned an office.
+
+
+
 
 
 
