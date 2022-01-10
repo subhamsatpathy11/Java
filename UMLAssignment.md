@@ -24,6 +24,18 @@ In a university there are various departments. A department has a name and is as
  - The registrar asks the student to pay for the initial tuition.
 
 
+![Blank diagram (1)](https://user-images.githubusercontent.com/66563130/148816672-8a99c0d6-30c4-4a22-a2ea-157c333fddd4.png)
+
+
+4. A scenario of Online Library Management System is given below. You need to refer the use case diagram and moving further need to create a sequence diagram for the same.
+
+ - Here are the steps that occur in the given use case named 'Create New Library User Account'. 
+ - The librarian requests the system to create a new online library account
+ - The librarian then selects the library user account type
+ - The librarian enters the user's details • The user's details are checked using the user Credentials Database 
+ - The new library user account is created
+ - A summary of the new account's details is then emailed to the user.
+
 
 
 
