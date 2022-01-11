@@ -54,7 +54,7 @@ Enter the number:
 
 2. Find out all the Armstrong numbers falling in the range of 100-999
 
-```
+```java
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -103,7 +103,7 @@ Output:
 
 3. Find out the simple as well as the compound interest of supplied
 
-```
+```java
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -151,7 +151,7 @@ compound Interest : 12521.915889608248
  - Condition 2: Any two subjects marks are greater than 60 is Promoted
  - Condition 3: Any one subject mark is greater than 60 or all subjects marks less than 60 is failed
 
-```
+```java
 import java.util.Scanner;
 
 public class Condition_Class {
@@ -210,8 +210,8 @@ Failed
  
  - Accept CTC from user and display tax amount
  
- ```
- import java.util.Scanner;
+ ```java
+import java.util.Scanner;
 
 public class Income_Tax {
 
@@ -254,5 +254,152 @@ Enter income :
 Income tax payable is : 80000.0
  ```
 
-6. 
- 
+6. Consider a CUI based application, where you are asking a user to enter his Login name and password, after entering the valid user-id and password it will print the message "Welcome" along with user name. As per the validation is concerned, the program should keep a track of login attempts. After three attempts a message should be flashed saying "Contact Admin" and the program should terminate.
+
+```java
+import java.util.Scanner;
+
+public class Login_User {
+
+	public static void main(String[] args) {
+		
+		String name, password;
+		int count = 0, itr, track = 0;
+		
+		while(count<3 && track == 0)
+		{
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Enter the login name : ");
+			name = scanner.nextLine();
+			System.out.println("Enter password : ");
+			password = scanner.nextLine();
+			
+			if(name.equals("Subham") && password.equals("satpathy"))
+			{
+				track = 1;
+				System.out.println("Welcome " + name);
+			}
+			else
+			{
+				count++;
+				itr = 3-count;
+				System.out.println("Try Again. Remaining attempts " + itr);
+				
+				if(itr == 0)
+				{
+					System.out.println("Contact Admin");
+				}
+			}	
+		}
+	}
+}
+```
+
+Output:
+
+```
+Enter the login name : 
+Subham
+Enter password : 
+sa
+Try Again. Remaining attempts 2
+Enter the login name : 
+Subham
+Enter password : 
+satpathy
+Welcome Subham
+```
+
+7. There is an Array which is of the size 15, which may or may not be sorted. You should write a program to accept a number and search if it in contained in the array
+
+ - Example:
+
+| Array Elements | 5 | 12 | 14 | 6 | 78 | 19 | 1 | 23 | 26 | 35 | 37 | 7 | 52 | 86 | 47 |
+|----------------|---|----|----|---|----|----|---|----|----|----|----|---|----|----|----|
+| Indexes | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
+
+ - Value to be search is 19
+
+```java
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Array_Search {
+	
+	public static void main(String[] args) {
+		
+		int arr[] = {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47};
+		
+		System.out.println(Arrays.toString(arr));
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number to search in array : ");
+		int n = scanner.nextInt();
+		
+		for(int i = 0; i< arr.length; i++)
+		{
+			if(arr[i] == n)
+			{
+				System.out.println(n + " is found in the array at " + i + "th index.");
+			}
+		}
+	}
+}
+```
+
+Output:
+
+```
+[5, 12, 14, 6, 78, 19, 1, 23, 26, 35, 37, 7, 52, 86, 47]
+Enter a number to search in array : 
+19
+19 is found in the array at 5th index.
+```
+
+8. Using the above table write method apply sorting using Bubble Sort
+
+```java
+import java.util.Arrays;
+
+public class Bubble_Sort {
+
+	public static void main(String[] args) {
+		
+		int arr[] = {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47}, temp;
+		System.out.println(Arrays.toString(arr));
+		
+		for(int i = 0; i < arr.length-1; i++)
+		{
+			for(int j = 0; j < arr.length - i - 1; j++)
+			{
+				if(arr[j] > arr[j+1])
+				{
+					temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		
+		System.out.println("Sorted Array :");
+		System.out.println(Arrays.toString(arr));
+	}
+}
+```
+
+Output:
+
+```
+[5, 12, 14, 6, 78, 19, 1, 23, 26, 35, 37, 7, 52, 86, 47]
+Sorted Array :
+[1, 5, 6, 7, 12, 14, 19, 23, 26, 35, 37, 47, 52, 78, 86]
+```
+
+9. Accept the marks of three students for the subject say A, B, C. Find the total scored and the average in all the subjects. Also Find the Total and Average scored by students in each respective Subject.
+
+```java
+```
+
+Output:
+
+```
+```
