@@ -5,33 +5,40 @@
  - This is the same as supplied value hence it is an Armstrong number.
 
 ```java
+//file name - Armstrong.java
+
 import java.util.Scanner;
 import java.lang.Math;
 
 public class Armstrong {
 
 	public static void main(String[] args) {
-		
+	
+		//declaring variables	
 		int n, temp, rem, res = 0, i = 0;
 		
+		//user input
 		System.out.println("Enter the number: ");
 		Scanner scanner = new Scanner(System.in);
 		n = scanner.nextInt();
 		
 		temp = n;
 		
+		//determining the power (no. of digits)
 		for(; temp!= 0; temp/= 10)
 		{
 			i++;
 		}
 		temp = n;
 		
+		//implementing armstrong equation
 		for(; temp!= 0; temp/= 10)
 		{
 			rem = temp % 10;
 			res += Math.pow(rem, i);
 		}
 		
+		//validating
 		if(res == n)
 		{
 			System.out.println(n + " is an ArmStrong number.");
@@ -55,6 +62,8 @@ Enter the number:
 2. Find out all the Armstrong numbers falling in the range of 100-999
 
 ```java
+//file name - Armstrong_range.java
+
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -66,23 +75,26 @@ public class Armstrong_range {
 		
 		for(int n = 100; n < 1000; n++)
 		{
+			//declaring variables
 			int temp, rem, res = 0, i = 0;
-			
 			
 			temp = n;
 			
+			//determining the power (no. of digits)
 			for(; temp!= 0; temp/= 10)
 			{
 				i++;
 			}
 			temp = n;
 			
+			//implementing armstrong equation
 			for(; temp!= 0; temp/= 10)
 			{
 				rem = temp % 10;
 				res += Math.pow(rem, i);
 			}
 			
+			//validating
 			if(res == n)
 			{
 				System.out.println(n + " is an ArmStrong number.");
@@ -104,17 +116,22 @@ Output:
 3. Find out the simple as well as the compound interest of supplied
 
 ```java
+//file name - SC_Interest.java
+
 import java.util.Scanner;
 import java.lang.Math;
 
 public class SC_Intrest {
 	
 	public static void main(String[] args) {
-	
+		
+		//declaring variables
 		double rate, amount, years, simple, compound;
 		
+		//declaring scanner object
 		Scanner scanner = new Scanner(System.in);
 		
+		//user input
 		System.out.println("Enter the amount : ");
 		amount = scanner.nextDouble();
 		System.out.println("Enter the rate : ");
@@ -122,9 +139,11 @@ public class SC_Intrest {
 		System.out.println("Enter no. of years : ");
 		years = scanner.nextDouble();
 		
+		//implementing the equations for SI and CI
 		simple = (rate * years * amount)/ 100;
 		compound = amount * Math.pow(1 + rate/100, years) - amount;
 		
+		//display
 		System.out.println("Simple Interest : "+simple);
 		System.out.println("compound Interest : "+compound);	
 	}
@@ -152,16 +171,21 @@ compound Interest : 12521.915889608248
  - Condition 3: Any one subject mark is greater than 60 or all subjects marks less than 60 is failed
 
 ```java
+//file name - Condition_Class.java
+
 import java.util.Scanner;
 
 public class Condition_Class {
 
 	public static void main(String[] args) {
 		
+		//declaring variables
 		double sub1, sub2, sub3;
 		
+		//declaring scanner object
 		Scanner scanner = new Scanner(System.in);
 		
+		//user input
 		System.out.println("Enter marks in subject 1: ");
 		sub1 = scanner.nextDouble();
 		System.out.println("Enter marks in subject 2: ");
@@ -169,6 +193,7 @@ public class Condition_Class {
 		System.out.println("Enter marks in subject 3: ");
 		sub3 = scanner.nextDouble();
 		
+		//conditions
 		if(sub1 > 60 && sub2 > 60 && sub3 > 60)
 		{
 			System.out.println("Passed");
@@ -211,34 +236,42 @@ Failed
  - Accept CTC from user and display tax amount
  
  ```java
+ //file name - Income_Tax.java
+ 
 import java.util.Scanner;
 
 public class Income_Tax {
 
 	public static void main(String[] args) {
 		
+		//declaring variables
 		double tax =  0, CTC;
 		
+		//user input
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter income : ");
 		CTC = scanner.nextDouble();
 		
+		//conditions
 		if(CTC <= 180000)
 		{
 			tax = 0;
 		}
 		else if(CTC > 180000 && CTC <= 300000)
 		{
+			//tax calculation
 			tax = (CTC/100)*10;
 			System.out.println("Income tax payable is : " + tax);
 		}
 		else if(CTC > 300000 && CTC <= 500000)
 		{
+			//tax calculation
 			tax = (CTC/100)*20;
 			System.out.println("Income tax payable is : " + tax);
 		}
 		else if(CTC > 500000 && CTC <= 1000000)
 		{
+			//tax calculation
 			tax = (CTC/100)*30;
 			System.out.println("Income tax payable is : " + tax);
 		}	
@@ -257,30 +290,38 @@ Income tax payable is : 80000.0
 6. Consider a CUI based application, where you are asking a user to enter his Login name and password, after entering the valid user-id and password it will print the message "Welcome" along with user name. As per the validation is concerned, the program should keep a track of login attempts. After three attempts a message should be flashed saying "Contact Admin" and the program should terminate.
 
 ```java
+//file name - Login_User.java
+
 import java.util.Scanner;
 
 public class Login_User {
 
 	public static void main(String[] args) {
 		
+		//declaring variables
 		String name, password;
 		int count = 0, itr, track = 0;
 		
+		//while loop for checking and exiting after attempts are complete or logged in successfully
 		while(count<3 && track == 0)
 		{
+			//user input
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Enter the login name : ");
 			name = scanner.nextLine();
 			System.out.println("Enter password : ");
 			password = scanner.nextLine();
 			
+			//validation
 			if(name.equals("Subham") && password.equals("satpathy"))
 			{
+				//login success tracker
 				track = 1;
 				System.out.println("Welcome " + name);
 			}
 			else
-			{
+			{	
+				//attempt count
 				count++;
 				itr = 3-count;
 				System.out.println("Try Again. Remaining attempts " + itr);
@@ -321,6 +362,8 @@ Welcome Subham
  - Value to be search is 19
 
 ```java
+//file name - Array_Search.java
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -328,13 +371,16 @@ public class Array_Search {
 	
 	public static void main(String[] args) {
 		
+		//initialize array
 		int arr[] = {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47};
 		
+		//display array and user input
 		System.out.println(Arrays.toString(arr));
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a number to search in array : ");
 		int n = scanner.nextInt();
 		
+		//array search
 		for(int i = 0; i< arr.length; i++)
 		{
 			if(arr[i] == n)
@@ -358,15 +404,19 @@ Enter a number to search in array :
 8. Using the above table write method apply sorting using Bubble Sort
 
 ```java
+//file name - Bubble_Sort.java
+
 import java.util.Arrays;
 
 public class Bubble_Sort {
 
 	public static void main(String[] args) {
 		
+		//initialize array
 		int arr[] = {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47}, temp;
 		System.out.println(Arrays.toString(arr));
 		
+		//bubble sort algorithm
 		for(int i = 0; i < arr.length-1; i++)
 		{
 			for(int j = 0; j < arr.length - i - 1; j++)
@@ -380,6 +430,7 @@ public class Bubble_Sort {
 			}
 		}
 		
+		//display
 		System.out.println("Sorted Array :");
 		System.out.println(Arrays.toString(arr));
 	}
