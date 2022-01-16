@@ -3,17 +3,12 @@
 1. Use a Hashset to hold employee objects. Upon running application, the details of the employees added to the HashSet should be displayed.
 
 | Employee (class) |
---------------------
+|------------------|
 | id | 
-------
 | name |
---------
 | salary |
-----------
 | department |
---------------
 | displayDetails() |
---------------------
 
 Feel free to add properties and methods to employee class
 
